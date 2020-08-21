@@ -1,22 +1,22 @@
-qtumd-rpc.js
+cicod-rpc.js
 ===============
 
-A client library to connect to QTUM Core RPC in JavaScript.
+A client library to connect to CICO Core RPC in JavaScript.
 
 ## Get Started
 
-qtumd-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
+cicod-rpc.js runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
 
 ```bash
-npm install qtumd-rpc
+npm install cicod-rpc
 ```
 
 ## Examples
 
 ```javascript
 var run = function() {
-  var qtumcore = require('qtumcore');
-  var RpcClient = require('qtumd-rpc');
+  var cicocore = require('cicocore');
+  var RpcClient = require('cicod-rpc');
 
   var config = {
     protocol: 'http',
@@ -52,7 +52,7 @@ var run = function() {
         }
 
         rawtxs.map(function (rawtx) {
-          var tx = new qtumcore.Transaction(rawtx.result);
+          var tx = new cicocore.Transaction(rawtx.result);
           console.log('\n\n\n' + tx.id + ':', tx.toObject());
         });
 
